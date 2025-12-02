@@ -159,8 +159,8 @@
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() { 
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction");
-    const AnalysisCount = displayWordCount("Analysis and discussion");
+    const IntroductionCount = displayWordCount("Introduction_InText");
+    const AnalysisCount = displayWordCount("Analysis_InText");
     // Calculate the sum of all selected sections
     const totalWordCount = IntroductionCount + AnalysisCount;
     // Display the total word count
@@ -189,7 +189,7 @@
     <h3 id="Introduction">Introduction</h3>
     <hr>
 
-    <pre id = "Introduction">
+    <pre id = "Introduction_InText">
           Active Learning (Angluin, 1988, Cohn et al., 1994) is a paradigm where a concept is learnt by an
           intelligent machine through the interaction of an oracle with the machine system, over a sequence of
           learning epochs. A distinctive component in an active system is the querying strategy, used to sample
@@ -210,7 +210,7 @@
     <h3 id="Analysis and discussion">Analysis and discussion</h3>
     <hr>
 
-    <p id= "Analysis and discussion"> yap yap yap here's a table: </p>
+    <p id= "Analysis_InText"> yap yap yap here's a table: </p>
 
 
     <!-----------------------------------------------TABLE SECTION-------------------------------------------------->
