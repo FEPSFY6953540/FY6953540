@@ -40,6 +40,9 @@
       .mySlides {display:none;}
 
     </style>
+
+    
+    <script type=”text/javascript” src=https://www.gstatic.com/charts/loader.js></script>
     
       
   </head>
@@ -252,6 +255,30 @@
       </tr>
       
     </table>
+
+    <!---------------- PIE CHART------------> 
+    <div id=”chart_div”></div>
+    
+    <script type=”text/javascript”>        <!-------Callback function where I can load the specific packs from Google I want, rn I'm loading the "corechart" package--->
+      google.charts.load(‘current’, { ‘packages’ : [‘corechart’] });
+      google.charts.setOnLoadCallback(drawChart);     <!-------"drawChart" is a function, where I can configure my chart---->
+
+      function drawChart() {   <!-----------Creating the actual pie chart-------------->
+          var data = google.visualization.arrayToDataTable([
+          [‘Task’, ‘Hours per Day’],
+          [‘Work’, 8],
+          [‘Sleep’, 8],
+          [‘Eat’, 2],
+          [‘Study’, 4],
+          [‘Exercise’, 2]
+          ]);
+          var options = {
+          title: ‘My Daily Activities’
+          };
+          var chart = new google.visualization.PieChart(document.getElementById(‘chart_div’));
+          chart.draw(data, options);
+          }
+      </script>
 
     
     <hr>
